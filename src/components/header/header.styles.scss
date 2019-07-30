@@ -1,0 +1,50 @@
+$shape-color: #cfcfcf;
+
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 80px;
+    padding: 10px;
+
+    .logo {
+      height: 100%;
+      width: 100%;
+
+      .logo-fill {
+        fill: $shape-color;
+      }
+      .logo-stroke {
+        stroke: $shape-color;
+        stroke-width: 14;
+      }
+    }
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    .option {
+      padding: 10px 15px;
+      font-size: 22px
+    }
+
+    .shopping-cart {
+      height: 100%;
+      width: 40px;
+
+      #shopping-cart {
+        fill: $shape-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<svg version="1.1" viewBox="0.0 0.0 349.1732283464567 333.18110236220474" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<clipPath id="p.0">
+		<path d="m0 0l349.17322 0l0 333.1811l-349.17322 0l0 -333.1811z" clip-rule="nonzero" />
+	</clipPath>
+	<g>
+		<path class="logo-stroke" stroke-linejoin="round" stroke-linecap="butt" d="m6.4251966 71.61024l167.44093 -64.502625l167.44096 64.502625l-167.44096 64.50262z" fill-rule="evenodd" />
+		<path class="logo-fill" d="m6.4251966 71.30971l168.97638 65.89572l0 189.09642l-168.97638 -65.89572z" fill-rule="evenodd" />
+		<path class="logo-stroke" stroke-linejoin="round" stroke-linecap="butt" d="m6.4251966 71.30971l168.97638 65.89572l0 189.09642l-168.97638 -65.89572z" fill-rule="evenodd" />
+	</g>
+</svg>

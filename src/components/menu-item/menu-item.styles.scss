@@ -1,0 +1,64 @@
+$shape-color: #cfcfcf;
+
+.shape-container {
+  display: grid;
+  grid-template-rows: 240px 24px;
+  width: 240px;
+  margin: 24px;
+
+  .shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid gray;
+
+    .square {
+      width: 160px;
+      height: 160px;
+      background: $shape-color;
+    }
+
+    .circle {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: $shape-color;
+    }
+
+    .diamond {
+      width: 0;
+      height: 0;
+      border: 100px solid transparent;
+      border-bottom-color: $shape-color;
+      position: relative;
+      top: -100px;
+    }
+    .diamond:after {
+      content: '';
+      position: absolute;
+      left: -100px;
+      top: 100px;
+      width: 0;
+      height: 0;
+      border: 100px solid transparent;
+      border-top-color: $shape-color;
+    }
+  }
+
+  .shape-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: space-between;
+    font-size: 24px;
+
+    .name {
+      width: 90%;
+    }
+
+    .add {
+      width: 10%;
+      fill: $shape-color;
+    }
+  }
+}
+

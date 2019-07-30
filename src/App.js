@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
 
 import './App.css';
@@ -8,7 +9,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <Homepage />
+      <div className='App'>
+        <Header />
+        <Homepage />
+      </div>
     );
   }
 }
