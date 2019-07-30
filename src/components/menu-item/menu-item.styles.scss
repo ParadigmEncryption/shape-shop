@@ -11,21 +11,9 @@ $shape-color: #cfcfcf;
     align-items: center;
     justify-content: center;
     // border: 2px solid gray;
+    cursor: pointer;
 
-    .square {
-      width: 160px;
-      height: 160px;
-      background: $shape-color;
-    }
-
-    .circle {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: $shape-color;
-    }
-
-    .diamond {
+    .geometric {
       width: 0;
       height: 0;
       border: 100px solid transparent;
@@ -33,7 +21,7 @@ $shape-color: #cfcfcf;
       position: relative;
       top: -100px;
     }
-    .diamond:after {
+    .geometric:after {
       content: '';
       position: absolute;
       left: -100px;
@@ -45,19 +33,69 @@ $shape-color: #cfcfcf;
     }
   }
 
+  .symbols {
+    position: relative;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+  }
+  .symbols:before,
+  .symbols:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid $shape-color;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+  }
+  .symbols:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+  }
+
+  .objects {
+    font-size: 200px;
+    display: inline-block;
+    width: 0.4em;
+    box-sizing: content-box;
+    height: 0.4em;
+    border: 0.1em solid $shape-color;
+    position: relative;
+    border-radius: 0.35em;
+  }
+  .objects:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: $shape-color;
+    width: 0.35em;
+    height: 0.08em;
+    transform: rotate(45deg);
+  }
+
   .shape-footer {
     width: 100%;
     display: flex;
     flex-direction: space-between;
     font-size: 24px;
 
-    .name {
+    .title {
       width: 90%;
     }
 
-    .add {
+    .plus {
       width: 10%;
       fill: $shape-color;
+      cursor: pointer;
     }
   }
 }

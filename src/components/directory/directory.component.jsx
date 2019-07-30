@@ -10,17 +10,31 @@ class Directory extends React.Component {
 
     this.state = {
       sections: [
-
+        {
+          title: 'geometric',
+          id: 1
+        },
+        {
+          title: 'symbols',
+          id: 2
+        },
+        {
+          title: 'objects',
+          id: 3
+        }
       ]
     }
   }
 
   render() {
+    const { sections } = this.state;
     return (
-      <div className='directory-menu'>
-        <MenuItem />
-        <MenuItem />
-        <MenuItem />
+      <div className='directory'>
+        {
+          sections.map(({ id, ...otherSectionProps }) => (
+            <MenuItem key={id} {...otherSectionProps} />
+          ))
+        }
       </div>
     );
   }
