@@ -1,17 +1,19 @@
 import React from 'react';
-import data from '../../utils/data';
+
+import svgData from '../../utils/svg-data';
+
 import Shape from '../shape/shape.component';
 
 import './cards.styles.scss';
 
-const shapes = data.map(icon => (
-  <Shape shape={icon.svg} className='svg-icon' size={2000} />
+const shapes = svgData.map(icon => (
+  <Shape key={icon.type} shape={icon.svg} className='svg-icon' size={220} />
 ));
 
 const Cards = () => (
-  <React.Fragment>
+  <div className='svg-container'>
     { shapes }
-  </React.Fragment>
+  </div>
 )
 
 export default Cards;

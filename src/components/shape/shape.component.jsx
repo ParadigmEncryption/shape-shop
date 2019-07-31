@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 const config = {
   svg: {
-    display: 'flex-inline',
-    margin: '0 auto'
+
+    display: 'block',
+    margin: 'auto'
+
   }
 };
 
@@ -13,7 +15,7 @@ const Shape = props => (
     style={config.svg}
     width={`${props.size}`}
     height={`${props.size}`}
-    viewBox={`0 0 512 512`}
+    viewBox={`0 0 25 25`}
     className={props.className}
   >
     <path d={props.shape} />
@@ -28,7 +30,7 @@ Shape.propTypes = {
 };
 
 Shape.defaultProps = {
-  size: 512
+  size: '240px'
 };
 
 export default Shape;
