@@ -3,6 +3,8 @@ import React from 'react';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as Cart } from '../../assets/shopping-cart.svg';
 
+
+
 import './header.styles.scss';
 
 class Header extends React.Component {

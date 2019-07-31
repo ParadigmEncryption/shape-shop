@@ -12,3 +12,9 @@ a {
 * {
   box-sizing: border-box;  /* fit all content, including padding, margin, and border, inside containers */
 }
+
+.svg-icon{
+  fill: #cfcfcf;
+  stroke: #cfcfcf;
+  stroke-width: 0;
+}
