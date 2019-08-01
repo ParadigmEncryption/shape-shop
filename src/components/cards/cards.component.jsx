@@ -6,13 +6,13 @@ import Shape from '../shape/shape.component';
 
 import './cards.styles.scss';
 
-const shapes = svgData.map(icon => (
-  <Shape key={icon.type} shape={icon.svg} className='svg-icon' size={220} />
-));
-
 const Cards = () => (
   <div className='svg-container'>
-    { shapes }
+    { 
+      svgData.map(icon => (
+        <Shape key={icon.id} shape={icon.svg} size={icon.size} className='svg-icon' />
+      ))
+    }
   </div>
 )
 
