@@ -1,25 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { ReactComponent as Plus } from '../../assets/plus.svg';
+
+import './shape.styles.scss';
+
 const config = {
   svg: {
-
     display: 'block',
     margin: 'auto'
-
   }
 };
 
 const Shape = props => (
-  <svg
-    style={config.svg}
-    width={`${props.size}`}
-    height={`${props.size}`}
-    viewBox={`0 0 25 25`}
-    className={props.className}
-  >
-    <path d={props.shape} />
-  </svg>
+  <div className='shape-container'>
+  <div className='shape'>
+    <svg
+      style={config.svg}
+      width={`${props.size}`}
+      height={`${props.size}`}
+      viewBox={`0 0 25 25`}
+      className='svg-icon'
+    >
+      <path d={props.shape} />
+    </svg>
+  </div>
+  <div className='shape-footer'>
+    <span className='type'>{props.type}</span>
+    <span className='plus'>+</span>
+  </div>
+</div>
+
 );
 
 Shape.propTypes = {

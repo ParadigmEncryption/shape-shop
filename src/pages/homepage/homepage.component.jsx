@@ -1,15 +1,14 @@
 import React from 'react'
 
 import Directory from '../../components/directory/directory.component';
-import Cards from '../../components/cards/cards.component';
+import CardList from '../../components/card-list/card-list.component';
 
 import './homepage.styles.scss';
 
 const Homepage = props => {
   return (
     <div className='homepage'>
-      <Cards />
-      <Directory />
+      <CardList />
     </div>
   );
 }
