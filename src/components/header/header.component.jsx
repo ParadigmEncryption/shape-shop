@@ -27,9 +27,6 @@ class Header extends React.Component {
             SIGN IN
           </div>
           <div className='option'>
-            CONTACT
-          </div>
-          <div className='option'>
             <Cart className='shopping-cart' />
           </div>
         </div>

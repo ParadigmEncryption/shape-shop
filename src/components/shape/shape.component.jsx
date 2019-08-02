@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as Plus } from '../../assets/plus.svg';
-
 import './shape.styles.scss';
 
 const config = {
@@ -36,8 +34,7 @@ const Shape = props => (
 Shape.propTypes = {
   shape: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
-  color: PropTypes.string,
-  className: PropTypes.string.isRequired
+  color: PropTypes.string
 };
 
 Shape.defaultProps = {

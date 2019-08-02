@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { ReactComponent as Plus } from '../../assets/plus.svg';
-
 import './menu-item.styles.scss';
 
 const MenuItem = ({ title }) => (
-  <div className='shape-container'>
-    <div className='shape'>
+  <div className='menu-item-container'>
+    <div className='menu-item'>
       <div className={title} />
     </div>
-    <div className='shape-footer'>
-      <span className='title'>{title}</span>
-      <Plus className='plus' />
+    <div className='menu-item-footer'>
+      <span className='title'>{title.toUpperCase()}</span>
     </div>
   </div>
 );

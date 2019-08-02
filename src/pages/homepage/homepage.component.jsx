@@ -8,6 +8,7 @@ import './homepage.styles.scss';
 const Homepage = props => {
   return (
     <div className='homepage'>
+      <Directory />
       <CardList />
     </div>
   );
