@@ -4,9 +4,9 @@ import svgData from '../../utils/svg-data';
 
 import Shape from '../shape/shape.component';
 
-import './card-list.styles.scss';
+import './shape-list.styles.scss';
 
-const CardList = () => (
+const ShapeList = () => (
   <div className='svg-container'>
     { 
       svgData.map(({ id, svg, size, type, ...otherSVGDataProps }) => (
@@ -16,4 +16,4 @@ const CardList = () => (
   </div>
 )
 
-export default CardList;
+export default ShapeList;

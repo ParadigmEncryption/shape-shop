@@ -1,7 +1,15 @@
-.directory {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
-  padding: 0;
+@media all and (max-width: 36em) {
+  .directory {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
 }
 
+@media all and (min-width: 36em) {
+  .directory {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
+}

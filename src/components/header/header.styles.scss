@@ -1,13 +1,33 @@
 $shape-color: #cfcfcf;
 
+@media all and (max-width: 36em) {
+  .header {
+    padding: .5em 1em;
+  }
+
+  .option {
+    font-size: .8em
+  }
+}
+
+@media all and (min-width: 36em) {
+  .header {
+    padding: 1em 2em;
+  }     
+
+  .option {
+    font-size: 1.5em
+  }
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
   width: 100%;
 
   .logo-container {
-    width: 5em;
+    width: 10%;
     cursor: pointer;
     .logo {
       .logo-fill {
@@ -26,10 +46,6 @@ $shape-color: #cfcfcf;
     justify-content: flex-end;
     cursor: pointer;
     
-    .option {
-      font-size: 1.5em
-    }
-
     .shopping-cart {
       height: 100%;
       width: 2em;

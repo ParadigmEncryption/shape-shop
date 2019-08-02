@@ -1,10 +1,30 @@
 $shape-color: #cfcfcf;
- .menu-item-container {
-  display: grid;
-  grid-template-rows: 12em 1.5em;
-  width: 12em;
-  height: 13.5em;
-  margin: 1em;
+ 
+@media all and (max-width: 36em) {
+  .menu-item-container {
+    display: grid;
+    grid-template-rows: 6em 1em;
+    width: 6em;
+    height: 7em;
+    margin: .5em;
+  }
+
+  .menu-item-footer {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 36em) {
+  .menu-item-container {
+    display: grid;
+    grid-template-rows: 10em 1.5em;
+    width: 10em;
+    height: 11.5em;
+    margin: 1em;
+  }
+
+  .menu-item-footer {
+    font-size: 1.5em;
+  }
 }
 
 .menu-item {
@@ -18,7 +38,6 @@ $shape-color: #cfcfcf;
 .menu-item-footer {
   width: 100%;
   text-align: center;
-  font-size: 1.5em;
 }
 
 
