@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as Cart } from '../../assets/shopping-cart.svg';
+import { ReactComponent as Logo } from '../../assets/svg-header/logo.svg';
+import { ReactComponent as Cart } from '../../assets/svg-header/shopping-cart.svg';
 
-
+import SearchBar from '../search-bar/search-bar.component';
 
 import './header.styles.scss';
 
@@ -12,8 +12,14 @@ class Header extends React.Component {
     super();
 
     this.state = {
-      currentUser: null
+      currentUser: null,
+      searchField: ''
     }
+  }
+
+  handleChange = (event) => {
+    const searchField = event.target.value;
+    this.setState({ searchField: searchField })
   }
 
   render() {
@@ -22,15 +28,18 @@ class Header extends React.Component {
         <div className='logo-container'>
           <Logo className='logo' />
         </div>
-        <div className='options'>
-          <div className='option'>
+        <SearchBar 
+          placeholder='Search Shapes' 
+          handleChange={this.handleChange}
+        />
+        <div className='options-container'>
+          <div className='sign-in'>
             SIGN IN
           </div>
           <div className='option'>
             <Cart className='shopping-cart' />
           </div>
         </div>
-        
       </div>
     )
   }

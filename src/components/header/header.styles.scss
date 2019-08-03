@@ -3,31 +3,24 @@ $shape-color: #cfcfcf;
 @media all and (max-width: 36em) {
   .header {
     padding: .5em 1em;
-  }
-
-  .option {
     font-size: .8em
   }
 }
 
 @media all and (min-width: 36em) {
   .header {
-    padding: 1em 2em;
+    padding: .5em 1em;
+    font-size: 1.5em;
   }     
-
-  .option {
-    font-size: 1.5em
-  }
 }
 
-
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
 
   .logo-container {
-    width: 10%;
+    width: 3em;
     cursor: pointer;
     .logo {
       .logo-fill {
@@ -40,7 +33,7 @@ $shape-color: #cfcfcf;
     }
   }
 
-  .options {
+  .options-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
