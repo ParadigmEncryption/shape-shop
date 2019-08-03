@@ -13,7 +13,7 @@ const SearchBar = ({ placeholder, handleChange }) => (
       onChange={handleChange}
       required
     />
-    <button type='submit' onSubmit={console.log('submitted')}>
+    <button type='submit'>
       <SearchIcon className='search-button' />
     </button>
   </div>

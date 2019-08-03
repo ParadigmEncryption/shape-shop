@@ -4,7 +4,7 @@ export default [
   {
     id: 1,
     svg: shapePaths.starHalf,
-    type: 'Star Half',
+    type: 'Half Star',
 
 
   },
