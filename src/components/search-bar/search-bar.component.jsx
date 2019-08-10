@@ -7,22 +7,18 @@ import { setSearchField } from '../../redux/search/search.actions';
 
 import './search-bar.styles.scss';
 
-const SearchBar = ({ placeholder, searchField, onSearchChange }) => (
+const SearchBar = ({ placeholder, onSearchChange }) => (
   <div className='search-bar-container'>
     <input 
       type='text' 
       className='search-bar'
       placeholder={placeholder}
-      onChange={(event) => onSearchChange(event)} />
+      onChange={ event => onSearchChange(event) }/>
     <button type='submit'> 
       <SearchIcon className='search-button' />
     </button>
   </div>
 );
-
-// const mapStateToProps = state => ({
-//   searchField: state.search.searchField
-// });
 
 const mapDispatchToProps = dispatch => ({
   onSearchChange: event => dispatch(setSearchField(event.target.value))

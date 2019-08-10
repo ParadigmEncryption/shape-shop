@@ -1,19 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import svgData from '../../utils/svg-data';
+import { SVG_DATA } from '../../utils/svg-data';
 
 import CollectionItem from '../collection-item/collection-item.component';
 
 import './collection-preview.styles.scss';
 
-const CollectionPreview = () => (
+const CollectionPreview = ({ searchField }) => (
   <div className='svg-container'>
     { 
-      svgData.map(({ id, svg, size, type, ...otherSVGDataProps }) => (
-        <CollectionItem key={id} shape={svg} size={size} type={type} {...otherSVGDataProps} />
-      ))
+      SVG_DATA.map(({ id, svg, size, type, ...otherSVGDataProps }) => {
+        if (type.toLowerCase().includes(searchField.toLowerCase())) {
+          return <CollectionItem key={id} shape={svg} size={size} type={type} {...otherSVGDataProps} />
+        } else {
+          return null;
+        }
+      })
     }
   </div>
 )
 
-export default CollectionPreview;
+const mapStateToProps = state => ({
+  searchField: state.search.searchField
+})
+
+export default connect(mapStateToProps)(CollectionPreview);

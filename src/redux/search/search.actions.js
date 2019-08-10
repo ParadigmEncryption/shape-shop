@@ -5,8 +5,8 @@ export const setSearchField = searchField => ({
   payload: searchField
 })
 
-export const searchItems = items => ({
-  type: SearchActionTypes.SEARCH_ITEMS,
-  payload: items
+export const clearSearchField = searchField => ({
+  type: SearchActionTypes.CLEAR_SEARCH_FIELD,
+  payload: searchField
 })
 

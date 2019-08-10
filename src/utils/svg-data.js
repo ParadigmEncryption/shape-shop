@@ -1,6 +1,6 @@
 import { svgPaths } from './svg-paths';
 
-export default [
+export const SVG_DATA = [
   {
     id: 1,
     svg: svgPaths.starHalf,

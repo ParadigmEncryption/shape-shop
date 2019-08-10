@@ -1,8 +1,7 @@
 import SearchActionTypes from './search.types';
 
 const INITIAL_STATE = {
-  searchField: '',
-  items: []
+  searchField: ''
 }
 
 const searchReducer = ( state = INITIAL_STATE, action ) => {
@@ -11,14 +10,6 @@ const searchReducer = ( state = INITIAL_STATE, action ) => {
       return {
         ...state,
         searchField: action.payload
-        // searchField: setSearchField(state.searchField)
-      };
-    case SearchActionTypes.SEARCH_ITEMS:
-      return {
-        ...state,
-        items: state.items.filter(
-          item => item.type.includes(action.payload) 
-        )
       };
     default:
       {
