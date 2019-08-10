@@ -3,25 +3,38 @@ import { connect } from 'react-redux';
 
 import { ReactComponent as SearchIcon } from '../../assets/svg-header/magnifying-glass.svg';
 
-import { setSearchField } from '../../redux/search/search.actions';
+import { setSearchField, clearSearchField } from '../../redux/search/search.actions';
 
 import './search-bar.styles.scss';
 
-const SearchBar = ({ placeholder, onSearchChange }) => (
+const SearchBar = ({ placeholder, onSearchChange, clearSearchField, searchField }) => (
   <div className='search-bar-container'>
     <input 
-      type='text' 
+      type='text'
       className='search-bar'
+      autoFocus
+      value={searchField}
       placeholder={placeholder}
-      onChange={ event => onSearchChange(event) }/>
+      onChange={ event => onSearchChange(event) } />
+    <span 
+      className={searchField ? 'clear-button' : 'clear-button hidden' }
+      onClick={() => clearSearchField()}
+    >
+      &#10006;
+    </span>
     <button type='submit'> 
-      <SearchIcon className='search-button' />
+      <SearchIcon className='search-icon' />
     </button>
   </div>
 );
 
+const mapStateToProps = state => ({
+  searchField: state.search.searchField
+})
+
 const mapDispatchToProps = dispatch => ({
-  onSearchChange: event => dispatch(setSearchField(event.target.value))
+  onSearchChange: event => dispatch(setSearchField(event.target.value)),
+  clearSearchField: searchField => dispatch(clearSearchField(searchField))
 });
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

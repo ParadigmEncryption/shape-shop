@@ -19,13 +19,22 @@ $font-type: 'Quicksand', sans-serif;
   }
 
   .search-bar {
-    width: 100%;
+    width: 80%;
     height: 40%;
     font-size: .8em;
     padding-left: 1em;
   }
 
-  .search-button {
+  .clear-button {
+    margin-right: 1em;
+    cursor: pointer;
+  
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  .search-icon {
     width: 3em;
     cursor: pointer;
     fill: $shape-color;
