@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './shape.styles.scss';
+import './collection-item.styles.scss';
 
-const Shape = props => (
+const CollectionItem = props => (
   <div className='shape-container'>
     <div className='shape'>
       <svg viewBox={`0 0 24 24`} className='svg-icon'>
@@ -11,9 +11,9 @@ const Shape = props => (
     </div>
     <div className='shape-footer'>
       <span className='type'>{props.type}</span>
-      <span className='plus'>+</span>
+      <span className='remove-button'>&#10011;</span>
     </div>
   </div>
 );
 
-export default Shape;
+export default CollectionItem;

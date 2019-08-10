@@ -2,12 +2,11 @@ $bg-color: #3e5875;
 $shape-color: #cfcfcf;
 $font-type: 'Quicksand', sans-serif;
 
-
-
 .search-bar-container {
   display: flex;
   align-items: center;
-  margin-right: 1em;
+  margin: 0 2em;
+  width: 100%;
 
   input, button {
     font-family: $font-type;
@@ -31,20 +30,4 @@ $font-type: 'Quicksand', sans-serif;
     cursor: pointer;
     fill: $shape-color;
   }
-
 }
-
-
-
-
-// .search-button {
-//   width: 2em;
-//   height: 40%;
-//   border: 1px solid $shape-color;
-//   background-color: $bg-color;
-//   color: $shape-color;
-//   text-align: center;
-//   border-radius: 0 2em 2em 0;
-//   cursor: pointer;
-//   font-size: 20px;
-// }

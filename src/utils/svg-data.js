@@ -1,28 +1,28 @@
-import { shapePaths } from './shape-paths';
+import { svgPaths } from './svg-paths';
 
 export default [
   {
     id: 1,
-    svg: shapePaths.starHalf,
+    svg: svgPaths.starHalf,
     type: 'Half Star',
 
 
   },
   {
     id: 2,
-    svg: shapePaths.ring,
+    svg: svgPaths.ring,
     type: 'Ring',
 
   },
   {
     id: 3,
-    svg: shapePaths.toggleOn,
-    type: 'Toggle On',
+    svg: svgPaths.toggle,
+    type: 'Toggle',
 
   },
   {
     id: 4,
-    svg: shapePaths.target,
+    svg: svgPaths.target,
     type: 'Target',
 
   }
