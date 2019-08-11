@@ -9,14 +9,11 @@ import './collection-preview.styles.scss';
 
 const CollectionPreview = ({ searchField }) => (
   <div className='svg-container'>
-    { 
-      SVG_DATA.map(({ id, svg, size, type, ...otherSVGDataProps }) => {
-        if (type.toLowerCase().includes(searchField.toLowerCase())) {
-          return <CollectionItem key={id} shape={svg} size={size} type={type} {...otherSVGDataProps} />
-        } else {
-          return null;
-        }
-      })
+    {SVG_DATA.filter(item => 
+      item.type.toLowerCase().includes(searchField.toLowerCase()))
+      .map(item => (
+        <CollectionItem key={item.id} item={item} />
+      ))
     }
   </div>
 )
