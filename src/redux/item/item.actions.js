@@ -1,8 +1,7 @@
 import ItemActionTypes from './item.types';
 
-export const toggleItemWindow = item => ({
+export const toggleItemWindow = () => ({
   type: ItemActionTypes.TOGGLE_PREVIEW_WINDOW,
-  payload: item
 })
 
 export const setCurrentItem = item => ({
