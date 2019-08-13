@@ -2,24 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { toggleItemWindow, setCurrentItem } from '../../redux/item/item.actions';
+import { setCurrentItem } from '../../redux/item/item.actions';
 
-import ItemPreviewPage from '../../pages/item-preview/item-preview.component';
 
 import './collection-item.styles.scss';
 
 
-const CollectionItem = ({ item, toggleItemWindow, setCurrentItem }) => {
+const CollectionItem = ({ item, setCurrentItem }) => {
   const { svg, type } = item;
 
   return (
     <div className='shape-container'>
       <Link to='/preview'
         className='shape'
-        onClick={() => {
-          setCurrentItem(item);
-          toggleItemWindow();
-        }}
+        onClick={() => setCurrentItem(item)}
       >
         <svg viewBox={`0 0 24 24`} className='svg-icon'>
           <path d={svg} />
@@ -34,7 +30,6 @@ const CollectionItem = ({ item, toggleItemWindow, setCurrentItem }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  toggleItemWindow: () => dispatch(toggleItemWindow()),
   setCurrentItem: item => dispatch(setCurrentItem(item))
 });
 

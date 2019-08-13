@@ -22,7 +22,7 @@ const SearchBar = ({ placeholder, onSearchChange, clearSearchField, searchField 
     >
       &#10006;
     </span>
-    <button type='submit'> 
+    <button type='submit'> {/* onClick = focus on search-bar */}
       <SearchIcon className='search-icon' />
     </button>
   </div>

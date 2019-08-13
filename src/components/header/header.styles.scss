@@ -34,7 +34,6 @@ $shape-color: #cfcfcf;
   margin-top: 2vmin;
 
   .logo-container {
-    
     cursor: pointer;
 
     .logo {
@@ -53,9 +52,8 @@ $shape-color: #cfcfcf;
   .options-container {
     display: flex;
     align-items: center;
-    width: 80%;
+    height: 100%;
     justify-content: flex-end;
-    cursor: pointer;
 
     .sign-in {
       font-size: 2vmax;
