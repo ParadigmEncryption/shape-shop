@@ -1,5 +1,39 @@
-.item-preview-window {
-  width: 80%;
-  height: 80%;
+
+// // mobile landscape mode
+// @media (min-width: 32em) and (max-height: 32em) {
+//   .item-preview {
+//     width: 85vmin;
+//     height: 85vmin;
+//     border: 2px solid red;
+//   }
+// }
+
+// // mobile protrait mode
+// @media (max-width: 32em) and (min-height: 16em) {
+//   .item-preview {
+//     width: 70vmin;
+//     height: 70vmin;
+//     border: 2px solid green;
+//   }
+// }
+
+// // desktop display
+// @media (min-width: 32em) and (min-height: 32em) {
+//   .item-preview {
+//     width: 70vmin;
+//     height: 70vmin;
+//     border: 2px solid gray;
+//   }
+// }
+
+.item-preview {
+  width: 70vmin;
+  height: 70vmin;
   border: 2px solid gray;
+}
+
+.item-preview-window {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }

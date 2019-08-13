@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { toggleItemWindow, setCurrentItem } from '../../redux/item/item.actions';
 
@@ -13,7 +14,7 @@ const CollectionItem = ({ item, toggleItemWindow, setCurrentItem }) => {
 
   return (
     <div className='shape-container'>
-      <div 
+      <Link to='/preview'
         className='shape'
         onClick={() => {
           setCurrentItem(item);
@@ -23,7 +24,7 @@ const CollectionItem = ({ item, toggleItemWindow, setCurrentItem }) => {
         <svg viewBox={`0 0 24 24`} className='svg-icon'>
           <path d={svg} />
         </svg>
-      </div>
+      </Link>  
       <div className='shape-footer'>
         <span className='type'>{type}</span>
         <span className='add-button'>&#10011;</span>

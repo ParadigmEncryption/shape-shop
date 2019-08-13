@@ -4,9 +4,13 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectCurrentItem } from '../../redux/item/item.selectors';
 
+import './item-preview.styles.scss';
+
 const ItemPreviewPage = () => (
   <div className='item-preview-window'>
-    <span>This is an item preview</span>
+    <div className='item-preview'>
+      <span>This is an item preview</span>
+    </div>
   </div>
 );
 

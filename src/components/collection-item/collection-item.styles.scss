@@ -33,8 +33,8 @@ $shape-color: #cfcfcf;
     // transform: rotate(180deg);
       width: 100%;
       height: 100%;
-      fill: #cfcfcf;
-      stroke: #cfcfcf;
+      fill: $shape-color;
+      stroke: $shape-color;
       stroke-width: 0;
     }
   }

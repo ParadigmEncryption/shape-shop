@@ -1,8 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
+import ItemPreviewPage from './pages/item-preview/item-preview.component';
 
 import './App.scss';
 
@@ -12,7 +13,10 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Header />
-        <Route path='/' component={Homepage} />
+          <Switch>
+            <Route exact path='/' component={Homepage} />
+            <Route path='/preview' component={ItemPreviewPage} />
+          </Switch>
       </div>
     );
   }

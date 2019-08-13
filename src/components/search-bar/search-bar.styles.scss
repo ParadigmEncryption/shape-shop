@@ -5,8 +5,10 @@ $font-type: 'Quicksand', sans-serif;
 .search-bar-container {
   display: flex;
   align-items: center;
-  margin: 0 2em;
+  justify-content: flex-end;
+  margin: 0 1em;
   width: 100%;
+  font-size: 3vw;
 
   input, button {
     font-family: $font-type;
@@ -20,8 +22,7 @@ $font-type: 'Quicksand', sans-serif;
 
   .search-bar {
     width: 80%;
-    height: 40%;
-    font-size: .8em;
+    font-size: 1em;
     padding-left: 1em;
   }
 
@@ -35,7 +36,7 @@ $font-type: 'Quicksand', sans-serif;
   }
 
   .search-icon {
-    width: 3em;
+    width: 4vw;
     cursor: pointer;
     fill: $shape-color;
   }

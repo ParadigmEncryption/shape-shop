@@ -1,7 +1,13 @@
+$bg-color: #3e5875;
+$shape-color: #cfcfcf;
+
 body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-family: 'Quicksand', sans-serif;
-  background-color: #3e5875;
-  color: #cfcfcf;
+  background-color: $bg-color;
+  color: $shape-color;
 }
 
 a {
