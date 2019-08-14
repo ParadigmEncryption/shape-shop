@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';  // needed to get access to history because of Redirect
 import { createStructuredSelector } from 'reselect';
 
 import ItemDetails from '../../components/item-details/item-details.component';
@@ -20,4 +21,4 @@ const mapStateToProps = createStructuredSelector({
   currentItem: selectCurrentItem
 });
 
-export default connect(mapStateToProps)(ItemPreviewPage);
+export default withRouter(connect(mapStateToProps)(ItemPreviewPage));

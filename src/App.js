@@ -1,13 +1,21 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
 import ItemPreviewPage from './pages/item-preview/item-preview.component';
 
+import { selectCurrentItem } from './redux/item/item.selectors';
+
 import './App.scss';
 
 class App extends React.Component {
+
+  componentDidUpdate() {
+    console.log(this.props.currentItem);
+  }
 
   render() {
     return (
@@ -15,11 +23,15 @@ class App extends React.Component {
         <Header />
           <Switch>
             <Route exact path='/' component={Homepage} />
-            <Route path='/preview' component={ItemPreviewPage} />
+            <Route path='/preview' render={() => this.props.currentItem ? (<ItemPreviewPage />) : (<Redirect to='/' />)}  />
           </Switch>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = createStructuredSelector({
+  currentItem: selectCurrentItem
+});
+
+export default connect(mapStateToProps)(App);

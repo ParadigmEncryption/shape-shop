@@ -4,23 +4,25 @@ import { Link } from 'react-router-dom';
 
 import { setCurrentItem } from '../../redux/item/item.actions';
 
-
 import './collection-item.styles.scss';
 
 
 const CollectionItem = ({ item, setCurrentItem }) => {
-  const { svg, type } = item;
+  const { id, svg, type } = item;
 
   return (
     <div className='shape-container'>
-      <Link to='/preview'
+      <div 
         className='shape'
         onClick={() => setCurrentItem(item)}
       >
-        <svg viewBox={`0 0 24 24`} className='svg-icon'>
-          <path d={svg} />
-        </svg>
-      </Link>  
+        <Link to={`/preview/${id}`}>
+          <svg viewBox={`0 0 24 24`} className='svg-icon'>
+            <path d={svg} />
+          </svg>
+        </Link>  
+      </div>
+
       <div className='shape-footer'>
         <span className='type'>{type}</span>
         <span className='add-button'>&#10011;</span>

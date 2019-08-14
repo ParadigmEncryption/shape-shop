@@ -7,11 +7,6 @@ const INITIAL_STATE = {
 
 const itemReducer = ( state = INITIAL_STATE, action ) => {
   switch (action.type) {
-    case ItemActionTypes.TOGGLE_PREVIEW_WINDOW:
-      return {
-        ...state,
-        hidden: !state.hidden
-      };
     case ItemActionTypes.SET_CURRENT_ITEM:
       return {
         ...state,

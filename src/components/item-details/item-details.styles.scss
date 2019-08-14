@@ -1,5 +1,38 @@
+$shape-color: #cfcfcf;
+
 .item-details-container {
+
   width: 70vmin;
   height: 70vmin;
   border: 2px solid gray;
+
+  .item-preview {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+
+    .svg-preview {
+      fill: $shape-color;
+      stroke: $shape-color;
+      stroke-width: 0;
+    }
+
+    .close-button {
+      font-size: 3vw;
+      height: 15%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: $shape-color;
+      cursor: pointer;
+    }
+  }
+
+  .item-options {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+
+    .item-title {
+      font-size: 4vw;
+    }
+  }
 }

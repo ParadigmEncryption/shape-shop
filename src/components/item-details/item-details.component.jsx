@@ -1,8 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-
-import { selectCurrentItem } from '../../redux/item/item.selectors';
 
 import './item-details.styles.scss';
 
@@ -14,11 +10,20 @@ const ItemDetails = ({ currentItem }) => {
       className='item-details-container'
       onClick={(event) => event.stopPropagation()}
     >
+
       <div className='item-preview'>
-        <svg viewBox={`0 0 24 24`} className='svg-icon'>
+        <div></div>
+        <svg viewBox={`0 0 24 24`} className='svg-preview'>
           <path d={svg} />
         </svg>
+        <button className='close-button'>&#10006;</button>
       </div>
+      <div className='item-options'>
+        <div className='item-title'>
+          {type}
+        </div>
+      </div>
+      
     </div>
   );
 }
