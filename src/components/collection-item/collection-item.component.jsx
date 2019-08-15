@@ -10,6 +10,10 @@ import './collection-item.styles.scss';
 const CollectionItem = ({ item, setCurrentItem }) => {
   const { id, svg, type } = item;
 
+  const svgStyle= {
+    fillRule: 'evenodd' 
+  }
+
   return (
     <div className='shape-container'>
       <div 
@@ -17,7 +21,7 @@ const CollectionItem = ({ item, setCurrentItem }) => {
         onClick={() => setCurrentItem(item)}
       >
         <Link to={`/preview/${id}`}>
-          <svg viewBox={`0 0 24 24`} className='svg-icon'>
+          <svg viewBox={`0 0 24 24`} width="100%" height="100%" className='svg-icon'>
             <path d={svg} />
           </svg>
         </Link>  
