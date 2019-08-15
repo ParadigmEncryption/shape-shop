@@ -29,20 +29,6 @@ $shape-color: #cfcfcf;
     border: 1px solid gray;
     cursor: pointer;
     position: relative;
-
-  
-    .svg-icon{
-    // transform: rotate(180deg);
-      // width: 100%;
-      // height: auto;
-      fill: $shape-color;
-      stroke: $shape-color;
-      stroke-width: 0;
-      
-      path {
-
-      }
-    }
   }
 
   .shape-footer {

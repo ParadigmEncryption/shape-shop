@@ -26,9 +26,17 @@
 //   }
 // }
 
+$shape-color: #cfcfcf;
+
 .item-preview-page {
   display: flex;
   justify-content: center;
+
+  .close-button {
+    font-size: 4vw;
+    height: 7%;
+    color: $shape-color;
+  }
 }
 
 

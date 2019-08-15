@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';  // needed to get access to history because of Redirect
+import { withRouter, Link } from 'react-router-dom';  // needed to get access to history because of Redirect
 import { createStructuredSelector } from 'reselect';
 
+import ItemToolbar from '../../components/item-toolbar/item-toolbar.component';
 import ItemDetails from '../../components/item-details/item-details.component';
 
 import { selectCurrentItem } from '../../redux/item/item.selectors';
@@ -13,7 +14,11 @@ const ItemPreviewPage = ({ history, currentItem }) => (
   <div 
     className='item-preview-page'
     onClick={() => history.push('/')}>
+    <ItemToolbar />
     <ItemDetails currentItem={currentItem} />
+    <Link className='close-button' to='/'>
+      &#10006;
+    </Link>
   </div>
 );
 

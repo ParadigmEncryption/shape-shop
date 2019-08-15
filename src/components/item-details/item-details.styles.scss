@@ -5,54 +5,35 @@ $shape-color: #cfcfcf;
   height: 70vmin;
   border: 2px solid gray;
   
-  button {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
 
-  .item-preview {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
 
-    .svg-preview {
-      fill: $shape-color;
-      stroke: $shape-color;
-      stroke-width: 0;
-    }
 
-    .close-button {
-      font-size: 4vw;
-      height: 10%;
-      color: $shape-color;
-    }
-  }
-
-  .item-options {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-
-    .item-title {
-      font-size: 4vw;
-    }
-
-    .paint-roller {
-      width: 3em;
-      fill: $shape-color;
-      stroke: $shape-color;
-      stroke-width: 0;
-    }
-
-    .rotate {
-      width: 2.5em;
-      stroke: $shape-color;
-      fill: $shape-color;
-    }
-
-    .add-button {
-      font-size: 5vw;
-      color: $shape-color;
-    }
-  }
 }
+
+//   .item-options {
+//     display: grid;
+//     grid-template-columns: 3fr 1fr 1fr 1fr;
+
+//     .item-title {
+//       font-size: 4vw;
+//     }
+
+//     .paint-roller {
+//       width: 3em;
+//       fill: $shape-color;
+//       stroke: $shape-color;
+//       stroke-width: 0;
+//     }
+
+//     .rotate {
+//       width: 2.5em;
+//       stroke: $shape-color;
+//       fill: $shape-color;
+//     }
+
+//     .add-button {
+//       font-size: 5vw;
+//       color: $shape-color;
+//     }
+//   }
+// }

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { setCurrentItem } from '../../redux/item/item.actions';
 
+import SvgDisplay from '../svg-display/svg-display.component';
+
 import './collection-item.styles.scss';
 
 
@@ -21,9 +23,7 @@ const CollectionItem = ({ item, setCurrentItem }) => {
         onClick={() => setCurrentItem(item)}
       >
         <Link to={`/preview/${id}`}>
-          <svg viewBox={`0 0 24 24`} width="100%" height="100%" className='svg-icon'>
-            <path d={svg} />
-          </svg>
+          <SvgDisplay svg={svg} />
         </Link>  
       </div>
 
