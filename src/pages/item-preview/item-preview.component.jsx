@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import ItemToolbar from '../../components/item-toolbar/item-toolbar.component';
 import ItemDetails from '../../components/item-details/item-details.component';
+import ItemPreviewFooter from '../../components/item-preview-footer/item-preview-footer.component';
 
 import { selectCurrentItem } from '../../redux/item/item.selectors';
 
@@ -14,11 +15,14 @@ const ItemPreviewPage = ({ history, currentItem }) => (
   <div 
     className='item-preview-page'
     onClick={() => history.push('/')}>
-    <ItemToolbar />
-    <ItemDetails currentItem={currentItem} />
-    <Link className='close-button' to='/'>
-      &#10006;
-    </Link>
+    <div className='item-preview'>
+      <ItemToolbar />
+      <ItemDetails currentItem={currentItem} />
+      <Link className='close-button' to='/'>
+        &#10006;
+      </Link>
+    </div>
+    <ItemPreviewFooter currentItem={currentItem} />
   </div>
 );
 

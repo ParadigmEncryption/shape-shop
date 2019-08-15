@@ -35,6 +35,11 @@ export const SVG_DATA = [
     id: 7,
     svg: svgPaths.magnifyingGlass,
     type: 'Magnifying Glass',
+  },
+  {
+    id: 8,
+    svg: svgPaths.colorPalette,
+    type: 'Color Palette'
   }
 
 ]

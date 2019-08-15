@@ -21,11 +21,6 @@ const ItemToolbar = () => {
         <SvgDisplay key={icon.id} svg={icon.svg} title={icon.title} />
         )
       }
-
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
   );
 }

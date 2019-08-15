@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import SvgDisplay from '../svg-display/svg-display.component';
 
 import './item-details.styles.scss';
 
 const ItemDetails = ({ currentItem }) => {
-  const { type, svg } = currentItem;
+  const { svg } = currentItem;
 
   return (
     <div 

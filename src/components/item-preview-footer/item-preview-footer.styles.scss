@@ -1,0 +1,24 @@
+@media (min-width: 32em) and (max-height: 32em) {
+  .item-preview-footer {
+    margin-left: 2vmin;
+  }
+}
+
+@media (min-width: 32em) and (min-height: 32em) {
+  .item-preview-footer {
+    margin-left: 4vmin;
+  }
+}
+
+.item-preview-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 70vmin;
+  font-size: 4vmin;
+  border: 2px solid gray;
+  height: 8vmin;
+
+  .icon {
+    width: 8vmin;
+  }
+}
