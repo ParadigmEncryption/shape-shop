@@ -16,7 +16,7 @@ const ItemPreviewPage = ({ history, currentItem }) => (
     className='item-preview-page'
     onClick={() => history.push('/')}>
     <div className='item-preview'>
-      <ItemToolbar />
+      <ItemToolbar currentItem={currentItem} />
       <ItemDetails currentItem={currentItem} />
       <Link className='close-button' to='/'>
         &#10006;
