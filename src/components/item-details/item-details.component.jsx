@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SvgDisplay from '../svg-display/svg-display.component';
+import CurrentItem from '../current-item/current-item.component';
 
 import './item-details.styles.scss';
 
@@ -12,7 +12,7 @@ const ItemDetails = ({ currentItem }) => {
       className='item-details-container'
       onClick={(event) => event.stopPropagation()}
     >
-      <SvgDisplay svg={svg} />
+      <CurrentItem item={currentItem} />
     </div>
   );
 }

@@ -10,11 +10,8 @@ import SvgDisplay from '../svg-display/svg-display.component';
 import './item-tools.styles.scss';
 
 
-const ItemTools = ({ tool, title, svg, currentItem, rotateItem, transform }) => {
+const ItemTools = ({ tool, title, svg, currentItem, rotateItem }) => {
   
-
-
-
 
   return (
     <button title={title} onClick={() => rotateItem(currentItem)}>
@@ -27,8 +24,8 @@ const mapDispatchToProps = dispatch => ({
   rotateItem: item => dispatch(rotateItem(item))
 });
 
-const mapStateToProps = createStructuredSelector({
-  transform: selectCurrentItemTransform
-})
+// const mapStateToProps = createStructuredSelector({
+//   transform: selectCurrentItemTransform
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ItemTools);
+export default connect(null, mapDispatchToProps)(ItemTools);

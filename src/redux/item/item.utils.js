@@ -1,5 +1,7 @@
-export const rotateItem = (currentItem, rotateAmount) => {
-  const rotate = `rotate(${rotateAmount})`
+export const rotateItem = (currentItem) => {
+  const rotate = "rotate(45)"
 
-  return { ...currentItem, transform: rotate }
+
+  return { ...currentItem, transform: rotate };
+
 }
