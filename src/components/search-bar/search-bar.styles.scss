@@ -6,9 +6,9 @@ $font-type: 'Quicksand', sans-serif;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 0 1em;
+  margin: 0 1vmin;
   width: 100%;
-  font-size: 3vw;
+
 
   input, button {
     font-family: $font-type;
@@ -22,12 +22,13 @@ $font-type: 'Quicksand', sans-serif;
 
   .search-bar {
     width: 80%;
-    font-size: 1em;
-    padding-left: 1em;
+    font-size: 3vmin;
+    padding-left: 1vmin;
   }
 
   .clear-button {
-    margin-right: 1em;
+    margin-right: 2vmin;
+      font-size: 3vmin;
     cursor: pointer;
   
     &.hidden {
@@ -36,7 +37,7 @@ $font-type: 'Quicksand', sans-serif;
   }
 
   .search-icon {
-    width: 4vw;
+    width: 4vmin;
     cursor: pointer;
     fill: $shape-color;
   }

@@ -14,22 +14,17 @@ export const TOOLBAR_SVG_DATA = [
   {
     id: 'strokeWidth',
     svg: svgPaths.linesThickThin,
-    type: 'Stroke Size'
-  },
-  {
-    id: 'zoom',
-    svg: svgPaths.magnifyingGlass,
-    type: 'Zoom'
+    title: 'Stroke Size'
   },
   {
     id: 'flipX',
     svg: svgPaths.arrowsOppositeX,
-    type: 'Flip Horizontally'
+    title: 'Flip Horizontally'
   },
   {
     id: 'flipY',
     svg: svgPaths.arrowsOppositeY,
-    type: 'Flip Vertically'
+    title: 'Flip Vertically'
   },
   {
     id: 'rotate',

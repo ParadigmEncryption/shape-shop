@@ -9,3 +9,8 @@ export const rotateItem = item => ({
   type: ItemActionTypes.ROTATE_ITEM,
   payload: item
 })
+
+export const flipXItem = item => ({
+  type: ItemActionTypes.FLIP_X_ITEM,
+  payload: item
+})

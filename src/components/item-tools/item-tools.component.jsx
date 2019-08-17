@@ -2,26 +2,41 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { rotateItem } from '../../redux/item/item.actions';
-import { selectCurrentItemTransform } from '../../redux/item/item.selectors';
+import { rotateItem, flipXItem } from '../../redux/item/item.actions';
 
 import SvgDisplay from '../svg-display/svg-display.component';
 
 import './item-tools.styles.scss';
 
 
-const ItemTools = ({ tool, title, svg, currentItem, rotateItem }) => {
-  
+const ItemTools = ({ tool, title, svg, currentItem, flipXItem, rotateItem }) => {
+  const handleClick = () => {
+    switch (tool) {
+      case 'strokeColor':
+        return;
+      case 'fillColor':
+        return;
+      case 'strokeWidth':
+        return;
+      case 'flipX':
+        return flipXItem(currentItem);
+      case 'flipY':
+          return;
+      case 'rotate':
+        return rotateItem(currentItem);
+    }
+  }
 
   return (
-    <button title={title} onClick={() => rotateItem(currentItem)}>
+    <div title={title} onClick={handleClick}>
       <SvgDisplay svg={svg} />
-    </button>
+    </div>
   );
 }
 
 const mapDispatchToProps = dispatch => ({
-  rotateItem: item => dispatch(rotateItem(item))
+  rotateItem: item => dispatch(rotateItem(item)),
+  flipXItem: item => dispatch(flipXItem(item))
 });
 
 // const mapStateToProps = createStructuredSelector({

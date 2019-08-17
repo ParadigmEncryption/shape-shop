@@ -1,5 +1,6 @@
 import ItemActionTypes from './item.types';
-import { rotateItem } from './item.utils';
+import { rotateItem, flipXItem } from './item.utils';
+
 
 const INITIAL_STATE = {
   currentItem: null
@@ -15,8 +16,13 @@ const itemReducer = ( state = INITIAL_STATE, action ) => {
     case ItemActionTypes.ROTATE_ITEM:
       return {
         ...state,
-        currentItem: rotateItem(state.currentItem)
+        currentItem: rotateItem(action.payload, action.payload.transform)
       }
+      case ItemActionTypes.FLIP_X_ITEM:
+        return {
+          ...state,
+          currentItem: flipXItem(action.payload, action.payload.transform),
+        }
     default: {
       return state;
     }

@@ -18,7 +18,7 @@ $shape-color: #cfcfcf;
 // desktop display
 @media (min-width: 32em) and (min-height: 32em) {
   .item-preview-page {
-    margin-top: 8vmin;
+    margin-top: 6vmin;
   }
 }
 
@@ -31,11 +31,11 @@ $shape-color: #cfcfcf;
     // display: flex;
     // justify-content: center;
     display: grid;
-    grid-template-columns: 7vmin 70vmin 7vmin;
+    grid-template-columns: 6vmin 60vmin 6vmin;
   
     .close-button {
-      font-size: 4vw;
-      height: 7vmin;
+      font-size: 4vmin;
+      height: 6vmin;
       color: $shape-color;
     }
   }

@@ -1,20 +1,16 @@
 import React from 'react';
 
-import CurrentItem from '../current-item/current-item.component';
-
 import './item-details.styles.scss';
 
-const ItemDetails = ({ currentItem }) => {
-  const { svg } = currentItem;
-
-  return (
-    <div 
-      className='item-details-container'
-      onClick={(event) => event.stopPropagation()}
-    >
-      <CurrentItem item={currentItem} />
-    </div>
-  );
-}
+const ItemDetails = ({ currentItem: { svg, transform } }) => (
+  <div 
+    className='item-details-container'
+    onClick={(event) => event.stopPropagation()}
+  >
+    <svg viewBox={`0 0 24 24`} style={{transform}}>
+      <path d={svg} />
+    </svg>
+  </div>
+);
 
 export default ItemDetails;

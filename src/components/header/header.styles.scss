@@ -29,15 +29,15 @@ $shape-color: #cfcfcf;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vmax;
+  height: 10vmin;
   padding: 1em;
-  margin-top: 2vmin;
+  margin: 2vmin;
 
   .logo-container {
     cursor: pointer;
 
     .logo {
-      width: 8vw;
+      width: 8vmin;
 
       .logo-fill {
         fill: $shape-color;
@@ -56,12 +56,13 @@ $shape-color: #cfcfcf;
     justify-content: flex-end;
 
     .sign-in {
-      font-size: 2vmax;
+      font-size: 2vmin;
+      padding: 0 2vmin;
     }
     
     .shopping-cart {
-      width: 5vw;
-      margin-left: 1em;
+      width: 5vmin;
+      margin-left: 1vmin;
 
       #shopping-cart {
         fill: $shape-color;

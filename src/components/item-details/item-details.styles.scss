@@ -1,34 +1,10 @@
 $shape-color: #cfcfcf;
 
 .item-details-container {
-  width: 70vmin;
-  height: 70vmin;
+
+  padding: 5vmin;
+
+  svg {
+    fill: $shape-color;
+  }
 }
-
-//   .item-options {
-//     display: grid;
-//     grid-template-columns: 3fr 1fr 1fr 1fr;
-
-//     .item-title {
-//       font-size: 4vw;
-//     }
-
-//     .paint-roller {
-//       width: 3em;
-//       fill: $shape-color;
-//       stroke: $shape-color;
-//       stroke-width: 0;
-//     }
-
-//     .rotate {
-//       width: 2.5em;
-//       stroke: $shape-color;
-//       fill: $shape-color;
-//     }
-
-//     .add-button {
-//       font-size: 5vw;
-//       color: $shape-color;
-//     }
-//   }
-// }
