@@ -16,12 +16,12 @@ const itemReducer = ( state = INITIAL_STATE, action ) => {
     case ItemActionTypes.ROTATE_ITEM:
       return {
         ...state,
-        currentItem: rotateItem(action.payload, action.payload.transform)
+        currentItem: rotateItem(state.currentItem, action.payload)
       }
       case ItemActionTypes.FLIP_X_ITEM:
         return {
           ...state,
-          currentItem: flipXItem(action.payload, action.payload.transform),
+          currentItem: flipXItem(state.currentItem, action.payload),
         }
     default: {
       return state;

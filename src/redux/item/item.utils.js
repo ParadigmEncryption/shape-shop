@@ -1,37 +1,41 @@
-export const rotateItem = (currentItem, transform = '') => {
-  let rotate = '';
-  let index = 0;
+export const rotateItem = (currentItem, rotate = '') => {
+  let rotateStr = '';
+  let rotateAmount = 0;
+ 
+    if (currentItem.rotate) {
+    currentItem.rotate.replace(/(\d+)deg/, match => { // match is the number before 'deg'
+      rotateAmount = parseInt(match) + 45;
+      
+      if (rotateAmount === 360) {
+        rotateAmount = 0;
+      }
+    rotateStr = ' rotate(' + rotateAmount.toString() + 'deg)';
 
-
-  if (transform.includes('rotate')) {
-    // rotate = transform.replace(/rotate(\d+)deg/, '$1');
-    const rotation = transform.replace(/\d+/, match => {
-      let rotateAmount = parseInt(match) + 45;
-      rotate = ' rotate(' + rotateAmount.toString() + 'deg)'
-      console.log(rotate);
+    return { ...currentItem, rotate: rotateStr }
     })
   } else {
-    rotate = ' rotate(45deg)'
+    rotateStr = ' rotate(45deg)'
   }
-  
-  return { ...currentItem, transform: transform + rotate }
-
-  
-
+  return { ...currentItem, rotate: rotateStr }
 }
 
-export const flipXItem = (currentItem, transform = '') => {
-let scaleX = ''
+export const flipXItem = (currentItem, scale = '') => {
+  let scaleX = '';
+  let scaleXNum = 1;
 
-  if (transform.includes('scale(1,')) {
-    scaleX = ' scale(-1, 1)'
-  } else if (transform.includes('scale(-1,')) {
-    scaleX = ' scale(1, 1)'
+  if (currentItem.hasOwnProperty(scale)) {
+    // if (scale.includes('scale(1,')) {
+      if (scale.includes('scale(1,')) {
+        scaleX = ' scale(-1, 1)' // 2nd '1' is for scaleY
+      } else if (scale.includes('scale(-1,')) {
+        scaleX = ' scale(1, 1)'
+      }
+      console.log(scale)
   } else {
     scaleX = ' scale(-1, 1)'
   }
 
-  return { ...currentItem, transform: transform + scaleX }
+  return { ...currentItem, scale: scaleX }
 }
 
 

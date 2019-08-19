@@ -1,7 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-
 import { rotateItem, flipXItem } from '../../redux/item/item.actions';
 
 import SvgDisplay from '../svg-display/svg-display.component';
@@ -24,6 +22,8 @@ const ItemTools = ({ tool, title, svg, currentItem, flipXItem, rotateItem }) => 
           return;
       case 'rotate':
         return rotateItem(currentItem);
+      default: 
+        return currentItem;
     }
   }
 

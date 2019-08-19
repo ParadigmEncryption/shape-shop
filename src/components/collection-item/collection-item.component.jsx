@@ -12,10 +12,6 @@ import './collection-item.styles.scss';
 const CollectionItem = ({ item, setCurrentItem }) => {
   const { id, svg, type } = item;
 
-  const svgStyle= {
-    fillRule: 'evenodd' 
-  }
-
   return (
     <div className='shape-container'>
       <div 
