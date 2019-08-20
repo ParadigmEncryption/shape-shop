@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { rotateItem, flipXItem } from '../../redux/item/item.actions';
+import { rotateItem, flipXItem, flipYItem } from '../../redux/item/item.actions';
 
 import SvgDisplay from '../svg-display/svg-display.component';
 
 import './item-tools.styles.scss';
 
 
-const ItemTools = ({ tool, title, svg, currentItem, flipXItem, rotateItem }) => {
+const ItemTools = ({ tool, title, svg, currentItem, flipXItem, flipYItem, rotateItem }) => {
   const handleClick = () => {
     switch (tool) {
       case 'strokeColor':
@@ -19,7 +19,7 @@ const ItemTools = ({ tool, title, svg, currentItem, flipXItem, rotateItem }) => 
       case 'flipX':
         return flipXItem(currentItem);
       case 'flipY':
-          return;
+        return flipYItem(currentItem);
       case 'rotate':
         return rotateItem(currentItem);
       default: 
@@ -36,7 +36,8 @@ const ItemTools = ({ tool, title, svg, currentItem, flipXItem, rotateItem }) => 
 
 const mapDispatchToProps = dispatch => ({
   rotateItem: item => dispatch(rotateItem(item)),
-  flipXItem: item => dispatch(flipXItem(item))
+  flipXItem: item => dispatch(flipXItem(item)),
+  flipYItem: item => dispatch(flipYItem(item))
 });
 
 // const mapStateToProps = createStructuredSelector({

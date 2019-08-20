@@ -1,43 +1,50 @@
-export const rotateItem = (currentItem, rotate = '') => {
+export const rotateItem = (currentItem) => {
   let rotateStr = '';
   let rotateAmount = 0;
  
-    if (currentItem.rotate) {
+  if (currentItem.rotate) {
     currentItem.rotate.replace(/(\d+)deg/, match => { // match is the number before 'deg'
       rotateAmount = parseInt(match) + 45;
-      
       if (rotateAmount === 360) {
         rotateAmount = 0;
       }
     rotateStr = ' rotate(' + rotateAmount.toString() + 'deg)';
-
-    return { ...currentItem, rotate: rotateStr }
+    return { ...currentItem, rotate: rotateStr };
     })
-  } else {
+  } else { // initial rotate set
     rotateStr = ' rotate(45deg)'
   }
   return { ...currentItem, rotate: rotateStr }
 }
 
-export const flipXItem = (currentItem, scale = '') => {
+export const flipXItem = (currentItem) => {
   let scaleX = '';
-  let scaleXNum = 1;
+  let scaleXNum = 0;
 
-  if (currentItem.hasOwnProperty(scale)) {
-    // if (scale.includes('scale(1,')) {
-      if (scale.includes('scale(1,')) {
-        scaleX = ' scale(-1, 1)' // 2nd '1' is for scaleY
-      } else if (scale.includes('scale(-1,')) {
-        scaleX = ' scale(1, 1)'
-      }
-      console.log(scale)
-  } else {
+  if (currentItem.scale) {
+    currentItem.scale.replace(/([-+]?\d+), ([-+]?\d+)/, (xy, x, y) => { 
+      scaleXNum = parseInt(x) * -(1);
+      scaleX = ' scale(' + scaleXNum.toString() + ', ' + y + ')';
+      return { ...currentItem, scale: scaleX }
+    })
+  } else { // initial scale set
     scaleX = ' scale(-1, 1)'
   }
-
   return { ...currentItem, scale: scaleX }
 }
 
+export const flipYItem = (currentItem) => {
+  let scaleY = '';
+  let scaleYNum = 0;
 
-
-
+  if (currentItem.scale) {
+    currentItem.scale.replace(/([-+]?\d+), ([-+]?\d+)/, (xy, x, y) => {
+      scaleYNum = parseInt(y) * -(1);
+      scaleY = ' scale(' + x + ', ' + scaleYNum.toString() + ')';
+      return { ...currentItem, scale: scaleY }
+    })
+  } else { // initial scale set
+    scaleY = ' scale(1, -1)'
+  }
+  return { ...currentItem, scale: scaleY }
+}
