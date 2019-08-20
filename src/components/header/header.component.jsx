@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { ReactComponent as Logo } from '../../assets/svg-header/logo.svg';
-import { ReactComponent as Cart } from '../../assets/svg-header/shopping-cart.svg';
 
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/cart-icon.component';
 import SearchBar from '../search-bar/search-bar.component';
+
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
 import './header.styles.scss';
 
-const Header = () => (
+const Header = ({ hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
@@ -20,10 +24,15 @@ const Header = () => (
         SIGN IN
       </div>
       <div className='option'>
-        <Cart className='shopping-cart' />
+        <CartIcon />
       </div>
     </div>
+    {hidden ? null : <CartDropdown />}
   </div>
 );
 
-export default (Header);
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden
+});
+
+export default connect(mapStateToProps)(Header);
