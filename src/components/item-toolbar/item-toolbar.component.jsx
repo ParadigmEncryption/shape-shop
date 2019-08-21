@@ -7,10 +7,7 @@ import ItemTools from '../item-tools/item-tools.component';
 import './item-toolbar.styles.scss';
 
 const ItemToolbar = ({ currentItem }) => (
-  <div 
-    className='toolbar-container'
-    onClick={(event) => event.stopPropagation()}
-  >
+  <div className='toolbar-container'>
     {TOOLBAR_SVG_DATA.map(icon =>
       <ItemTools key={icon.id} tool={icon.id} title={icon.title} svg={icon.svg} currentItem={currentItem} />
     )}

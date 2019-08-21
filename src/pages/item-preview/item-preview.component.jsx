@@ -11,10 +11,8 @@ import { selectCurrentItem } from '../../redux/item/item.selectors';
 
 import './item-preview.styles.scss';
 
-const ItemPreviewPage = ({ history, currentItem }) => (
-  <div 
-    className='item-preview-page'
-    onClick={() => history.push('/')}>
+const ItemPreviewPage = ({ currentItem }) => (
+  <div className='item-preview-page'>
     <div className='item-preview'>
       <ItemToolbar currentItem={currentItem} />
       <ItemDetails currentItem={currentItem} />

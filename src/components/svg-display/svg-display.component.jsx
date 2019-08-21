@@ -2,7 +2,7 @@ import React from 'react';
 
 import './svg-display.styles.scss';
 
-const SvgDisplay = ({ svg, viewBox, ...props }) => (
+const SvgDisplay = ({ svg }) => (
   <div className='svg-display-container'>
     <svg viewBox={`0 0 24 24`} className='svg-display'>
       <path d={svg} />

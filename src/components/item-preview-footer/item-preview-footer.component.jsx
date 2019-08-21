@@ -1,33 +1,31 @@
 import React from 'react'
 
-import { svgPaths } from '../../utils/svg-paths';
+import { svgIconPaths } from '../../utils/svg-icon-paths';
 
 import SvgDisplay from '../svg-display/svg-display.component';
+import SaveItemIcon from '../save-item-icon/save-item-icon.component';
 
 import './item-preview-footer.styles.scss';
 
-const ItemPreviewFooter = ({ currentItem }) => {
- 
-  const downloadIcon = svgPaths.arrowDownload;
-  const saveIcon = svgPaths.diskFloppy;
-
-  return (
-  <div 
-    className='item-preview-footer'
-    onClick={(event) => event.stopPropagation()}
-  >
-    <div>
-    {currentItem.type}
+const ItemPreviewFooter = ({ currentItem }) => (
+  <div className='item-preview-footer'>
+    <div className='footer-top'>
+        <input 
+            type='text' 
+            className='item-name'
+            value={currentItem.type}
+          />
+      <div>
+        <SaveItemIcon />
+      </div>
     </div>
-    <div className='icon'>
-      <SvgDisplay svg={downloadIcon} />
-    </div>
-    <div className='icon'>
-      <SvgDisplay svg={saveIcon} />
-    </div>
-    
+    <div className='footer-bottom'>
+      <div className='download-icon'>
+        <SvgDisplay svg={svgIconPaths.downloadIcon} />
+      </div> 
+    </div>  
   </div>
-  );
-}
+);
+
 
 export default ItemPreviewFooter;
