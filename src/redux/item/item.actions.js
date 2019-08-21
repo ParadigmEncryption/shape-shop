@@ -5,6 +5,11 @@ export const setCurrentItem = item => ({
   payload: item
 })
 
+export const setItemName = event => ({
+  type: ItemActionTypes.SET_ITEM_NAME,
+  payload: event
+})
+
 export const rotateItem = item => ({
   type: ItemActionTypes.ROTATE_ITEM,
   payload: item

@@ -4,42 +4,42 @@ export const SVG_DATA = [
   {
     id: 1,
     svg: svgPaths.starHalf,
-    type: 'Half Star',
+    name: 'Half Star',
   },
   {
     id: 2,
     svg: svgPaths.ring,
-    type: 'Ring',
+    name: 'Ring',
   },
   {
     id: 3,
     svg: svgPaths.toggle,
-    type: 'Toggle',
+    name: 'Toggle',
   },
   {
     id: 4,
     svg: svgPaths.target,
-    type: 'Target',
+    name: 'Target',
   },
   {
     id: 5,
     svg: svgPaths.paintRoller,
-    type: 'Paint Roller',
+    name: 'Paint Roller',
   },
   {
     id: 6,
     svg: svgPaths.rotateClockwise,
-    type: 'Rotate Clockwise',
+    name: 'Rotate Clockwise',
   },
   {
     id: 7,
     svg: svgPaths.magnifyingGlass,
-    type: 'Magnifying Glass',
+    name: 'Magnifying Glass',
   },
   {
     id: 8,
     svg: svgPaths.colorPalette,
-    type: 'Color Palette'
+    name: 'Color Palette'
   }
 
 ]

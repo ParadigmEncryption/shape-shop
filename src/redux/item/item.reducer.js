@@ -13,6 +13,11 @@ const itemReducer = ( state = INITIAL_STATE, action ) => {
         ...state,
         currentItem: action.payload
       }
+    case ItemActionTypes.SET_ITEM_NAME:
+      return {
+        ...state,
+        currentItem: { ...state.currentItem, name: action.payload}
+      }
     case ItemActionTypes.ROTATE_ITEM:
       return {
         ...state,

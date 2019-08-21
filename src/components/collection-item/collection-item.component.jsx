@@ -10,7 +10,7 @@ import './collection-item.styles.scss';
 
 
 const CollectionItem = ({ item, setCurrentItem }) => {
-  const { id, svg, type } = item;
+  const { id, svg, name } = item;
 
   return (
     <div className='shape-container'>
@@ -24,7 +24,7 @@ const CollectionItem = ({ item, setCurrentItem }) => {
       </div>
 
       <div className='shape-footer'>
-        <span className='type'>{type}</span>
+        <span className='type'>{name}</span>
         <span className='add-button'>&#10011;</span>
       </div>
     </div>

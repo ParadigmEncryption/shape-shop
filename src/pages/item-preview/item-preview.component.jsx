@@ -20,7 +20,7 @@ const ItemPreviewPage = ({ currentItem }) => (
         &#10006;
       </Link>
     </div>
-    <ItemPreviewFooter currentItem={currentItem} />
+    <ItemPreviewFooter />
   </div>
 );
 

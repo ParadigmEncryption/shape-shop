@@ -9,7 +9,7 @@ export const selectCurrentItem = createSelector(
   item => item.currentItem
 );
 
-export const selectCurrentItemTransform = createSelector(
+export const selectItemName = createSelector(
   [selectCurrentItem],
-  currentItem => currentItem.transform
+  currentItem => currentItem.name
 );
