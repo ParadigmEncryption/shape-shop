@@ -14,8 +14,10 @@ import './item-preview.styles.scss';
 const ItemPreviewPage = ({ currentItem }) => (
   <div className='item-preview-page'>
     <div className='item-preview'>
-      <ItemToolbar currentItem={currentItem} />
-      <ItemDetails currentItem={currentItem} />
+      <ItemToolbar item={currentItem} />
+      <div className='item-details-container'>
+        <ItemDetails item={currentItem} />
+      </div>
       <Link className='close-button' to='/'>
         &#10006;
       </Link>

@@ -1,10 +1,10 @@
 $shape-color: #cfcfcf;
 $bg-color: #3e5875;
 
-@media (min-width: 32em) and (max-height: 32em) {
+@media (min-width: 32em) and (max-height: 36em) {
   .cart-container {
     height: 80vmin;
-    width: 40vmin;
+    width: 30vmin;
   }
 }
 
@@ -15,19 +15,17 @@ $bg-color: #3e5875;
 //   }
 // }
 
-@media (min-height: 32em) {
+@media (min-height: 36em) {
   .cart-container {
-    height: 60vmin;
+    height: 70vmin;
     width: 30vmin;
   }
 }
 
 .cart-container {
   position: absolute;
-  
   display: flex;
   flex-direction: column;
-  padding: 2vmin;
   border: 1px solid $shape-color;
   background-color: $bg-color;
   top: 12vmin;
@@ -35,15 +33,15 @@ $bg-color: #3e5875;
   z-index: 5;
 
   .cart-items {
-    height: 85%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     overflow-y: scroll;
+    padding: 1em;
 
     .empty-message {
-      position: absolute;
-      top: 20vmin;
       font-size: 1em;
+      margin: 10vmin auto;
     }
     
   }

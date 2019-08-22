@@ -7,7 +7,7 @@ import SvgDisplay from '../svg-display/svg-display.component';
 import './item-tools.styles.scss';
 
 
-const ItemTools = ({ tool, title, svg, currentItem, flipXItem, flipYItem, rotateItem }) => {
+const ItemTools = ({ tool, title, svg, item, flipXItem, flipYItem, rotateItem }) => {
   const handleClick = () => {
     switch (tool) {
       case 'strokeColor':
@@ -17,13 +17,13 @@ const ItemTools = ({ tool, title, svg, currentItem, flipXItem, flipYItem, rotate
       case 'strokeWidth':
         return;
       case 'flipX':
-        return flipXItem(currentItem);
+        return flipXItem(item);
       case 'flipY':
-        return flipYItem(currentItem);
+        return flipYItem(item);
       case 'rotate':
-        return rotateItem(currentItem);
+        return rotateItem(item);
       default: 
-        return currentItem;
+        return item;
     }
   }
 
@@ -39,9 +39,5 @@ const mapDispatchToProps = dispatch => ({
   flipXItem: item => dispatch(flipXItem(item)),
   flipYItem: item => dispatch(flipYItem(item))
 });
-
-// const mapStateToProps = createStructuredSelector({
-//   transform: selectCurrentItemTransform
-// })
 
 export default connect(null, mapDispatchToProps)(ItemTools);

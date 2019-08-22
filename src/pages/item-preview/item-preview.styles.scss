@@ -32,6 +32,10 @@ $shape-color: #cfcfcf;
     // justify-content: center;
     display: grid;
     grid-template-columns: 6vmin 60vmin 6vmin;
+
+    .item-details-container {
+      padding: 5vmin;
+    }
   
     .close-button {
       font-size: 4vmin;
