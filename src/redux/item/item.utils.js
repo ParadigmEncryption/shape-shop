@@ -1,3 +1,31 @@
+// export const setItemName = (currentItem, event) => {
+//   // const regex = new RegExp('^[a-zA-Z0-9]+$');
+//   // const key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+//   // if (!regex.test(key)) {
+//   //   preventDefault();
+//   //   return false;
+//   // }
+
+
+//     // let k = event.keyCode || event.which;
+//     // var k = String.fromCharCode(!event.charCode ? event.which : event.charCode)
+//     // if ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8   || (k >= 48 && k <= 57)) {
+
+//     // let k = new Regex(\`|\~|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\+|\=|\[|\{|\]|\}|\||\\|\'|\<|\,|\.|\>|\?|\/|\""|\;|\:|\s)
+
+//     if ((k>=48 && k<=57) || k==8 || (k>=35 && k<=40)|| k==46) {
+//       console.log(k);
+//       return { ...currentItem, name: event }
+//     } else {
+//       console.log(k);
+//       return currentItem;
+//     }
+     
+
+    
+  
+// }
+
 export const rotateItem = (currentItem) => {
   let rotateStr = '';
   let rotateAmount = 0;

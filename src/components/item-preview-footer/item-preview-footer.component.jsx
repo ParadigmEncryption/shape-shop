@@ -19,6 +19,7 @@ const ItemPreviewFooter = ({ itemName, onNameChange }) => (
             type='text' 
             className='item-name'
             value={itemName}
+            maxLength='20'
             onChange={event => onNameChange(event)}
           />
       <div>
