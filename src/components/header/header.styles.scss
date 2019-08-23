@@ -1,15 +1,13 @@
 $shape-color: #cfcfcf;
+$bg-color: #3e5875;
 
 // // mobile landscape mode
-// @media all and (min-width: 32em) {
+// @media (max-height: 36em) {
 //   .header {
-//     height: 2em;
+//     height: 20vmin;
 //   }
-//     .logo {
-//       width: 1em;
-//     }
-
 // }
+
 // // mobile portrait mode
 // @media (max-width: 32em) and (min-height: 16em) {
 //   .header {
@@ -26,12 +24,19 @@ $shape-color: #cfcfcf;
 // }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vmin;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vmin;
-  padding: 1em;
-  margin: 2vmin;
+
+  padding: 4vmin 4vmin 0 4vmin;
+
+  background-color: $bg-color;
+  z-index: 5;
 
   .logo-container {
     cursor: pointer;

@@ -13,18 +13,14 @@ import './App.scss';
 
 class App extends React.Component {
 
-  componentDidUpdate() {
-    console.log(this.props.currentItem);
-  }
-
   render() {
     return (
       <div className='App'>
-        <Header />
-          <Switch>
-            <Route exact path='/' component={Homepage} />
-            <Route path='/preview' render={() => this.props.currentItem ? (<ItemPreviewPage />) : (<Redirect to='/' />)}  />
-          </Switch>
+      <Header />
+        <Switch>
+          <Route exact path='/' component={Homepage} />
+          <Route path='/preview' render={() => this.props.currentItem ? (<ItemPreviewPage />) : (<Redirect to='/' />)}  />
+        </Switch>
       </div>
     );
   }

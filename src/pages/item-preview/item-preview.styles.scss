@@ -1,31 +1,27 @@
 $shape-color: #cfcfcf;
 
 // mobile landscape mode
-@media (min-width: 32em) and (max-height: 32em) {
-  .item-preview.page {
-    margin-top: 0;
-    height: 75vmin;
-  }
-}
+// @media (max-height: 36em) {
+//   .item-preview.page {
+//     margin-top: 15vmin;
 
-// mobile protrait mode
-@media (max-width: 32em) and (min-height: 16em) {
-  .item-preview-page {
-    margin-top: 20vmin;
-  }
-}
+//   }
+// }
+
+
 
 // desktop display
-@media (min-width: 32em) and (min-height: 32em) {
-  .item-preview-page {
-    margin-top: 6vmin;
-  }
-}
+// @media (min-height: 36em) {
+//   .item-preview-page {
+    
+//   }
+// }
 
 .item-preview-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 18vmin;
 
   .item-preview {
     // display: flex;
