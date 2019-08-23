@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';  // needed to get access to history because of Redirect
+import { withRouter, Link } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
 import ItemToolbar from '../../components/item-toolbar/item-toolbar.component';
@@ -11,16 +11,16 @@ import { selectCurrentItem } from '../../redux/item/item.selectors';
 
 import './item-preview.styles.scss';
 
-const ItemPreviewPage = ({ currentItem }) => (
+const ItemPreviewPage = ({ currentItem, history }) => (
   <div className='item-preview-page'>
     <div className='item-preview'>
       <ItemToolbar item={currentItem} />
       <div className='item-details-container'>
         <ItemDetails item={currentItem} />
       </div>
-      <Link className='close-button' to='/'>
+      <button className='close-button' onClick={history.goBack}>
         &#10006;
-      </Link>
+      </button>
     </div>
     <ItemPreviewFooter />
   </div>

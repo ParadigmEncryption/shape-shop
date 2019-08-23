@@ -41,6 +41,9 @@ $shape-color: #cfcfcf;
       font-size: 4vmin;
       height: 6vmin;
       color: $shape-color;
+      background: transparent;
+      border: none;
+      outline: none;
     }
   }
 }

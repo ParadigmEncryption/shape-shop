@@ -1,8 +1,24 @@
-$shape-color: #cfcfcf;  
+$shape-color: #cfcfcf;
+$bg-color: #3e5875;
 
-.shopping-icon {
-  width: 5vmin;
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vmin;
   margin-left: 1vmin;
   cursor: pointer;
+
+  .shopping-icon {
+  height: 100%;
   fill: $shape-color;
+  }
+
+  .item-count {
+    position: absolute;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $bg-color;
+  }
 }
