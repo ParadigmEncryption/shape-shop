@@ -5,20 +5,25 @@ import { createStructuredSelector } from 'reselect';
 import { svgIconPaths } from '../../utils/svg-icon-paths';
 
 import { selectCurrentItem } from '../../redux/item/item.selectors';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { addItem } from '../../redux/cart/cart.actions';
 
 import SvgDisplay from '../svg-display/svg-display.component';
 
 import './save-item-icon.styles.scss';
 
-const SaveItemIcon = ({ currentItem, addItem }) => {
+const SaveItemIcon = ({ currentItem, cartItems, addItem }) => {
 
   return (
     <div className='save-item'>
       <div 
         className='save-icon'
         onClick={() => addItem(currentItem)}>
-        <SvgDisplay svg={svgIconPaths.saveIcon} />
+        {
+          cartItems.find(cartItem => cartItem.name === currentItem.name) 
+          ? <SvgDisplay svg={svgIconPaths.saveIcon} />
+          : <SvgDisplay svg={svgIconPaths.addToCartIcon} />
+        }
       </div>  
     </div>
   )
@@ -29,7 +34,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = createStructuredSelector({
-  currentItem: selectCurrentItem
+  currentItem: selectCurrentItem,
+  cartItems: selectCartItems
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SaveItemIcon);

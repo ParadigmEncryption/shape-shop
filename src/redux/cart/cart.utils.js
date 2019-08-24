@@ -10,6 +10,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
       : cartItem
     );
   } else if(cartItems.length >= 10) {
+    console.log('Your cart is full')
     return cartItems;
   } else {
     return [ ...cartItems, { ...cartItemToAdd }];
