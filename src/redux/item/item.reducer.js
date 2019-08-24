@@ -13,6 +13,11 @@ const itemReducer = ( state = INITIAL_STATE, action ) => {
         ...state,
         currentItem: action.payload
       }
+    case ItemActionTypes.CLEAR_CURRENT_ITEM:
+      return {
+        ...state,
+        currentItem: null
+      }
     case ItemActionTypes.SET_ITEM_NAME:
       return {
         ...state,

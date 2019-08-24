@@ -4,7 +4,8 @@
 
   .thumbnail {
     align-self: center;
-    width: 50%;
+    width: 75%;
+    cursor: pointer;
   }
 
   .cart-item-footer {
@@ -13,7 +14,7 @@
     margin-bottom: 1em;
 
     .name {
-      font-size: 1em;
+      font-size: 0.8em;
     }
 
     .remove-button {

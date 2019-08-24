@@ -11,19 +11,17 @@ import { selectCurrentItem } from './redux/item/item.selectors';
 
 import './App.scss';
 
-class App extends React.Component {
+const App = ({ currentItem }) => {
 
-  render() {
-    return (
-      <div className='App'>
-      <Header />
-        <Switch>
-          <Route exact path='/' component={Homepage} />
-          <Route path='/preview' render={() => this.props.currentItem ? (<ItemPreviewPage />) : (<Redirect to='/' />)}  />
-        </Switch>
-      </div>
-    );
-  }
+  return (
+    <div className='App'>
+    <Header />
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+        <Route path='/preview' render={() => currentItem ? (<ItemPreviewPage />) : (<Redirect to='/' />)}  />
+      </Switch>
+    </div>
+  );
 }
 
 const mapStateToProps = createStructuredSelector({

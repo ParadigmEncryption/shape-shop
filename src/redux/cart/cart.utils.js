@@ -3,7 +3,13 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     cartItem => cartItem.name === cartItemToAdd.name
   );
 
-  if (existingCartItem || cartItems.length >= 10) {
+  if (existingCartItem) {
+    return cartItems.map(cartItem => 
+      cartItem.name === cartItemToAdd.name 
+      ? { ...cartItem, ...cartItemToAdd } 
+      : cartItem
+    );
+  } else if(cartItems.length >= 10) {
     return cartItems;
   } else {
     return [ ...cartItems, { ...cartItemToAdd }];

@@ -1,18 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import { removeItem } from '../../redux/cart/cart.actions.js';
+import { removeItem } from '../../redux/cart/cart.actions';
+import { setCurrentItem } from '../../redux/item/item.actions';
 
-// import SvgDisplay from '../svg-display/svg-display.component';
 import ItemDetails from '../item-details/item-details.component';
 
 import './cart-item.styles.scss';
 
-const CartItem = ({ item, removeItem }) => (
+const CartItem = ({ item, removeItem, setCurrentItem }) => (
   <div className='cart-item'>
-    <div className='thumbnail'>
-      <ItemDetails item={item} />
-    </div>
+    <Link className='thumbnail' to='preview' onClick={() => setCurrentItem(item)}> 
+       <ItemDetails item={item} />
+    </Link>
     <div className='cart-item-footer'>
       <div className='name'>
         {item.name}
@@ -22,10 +23,11 @@ const CartItem = ({ item, removeItem }) => (
       </div>
     </div>
   </div>
-)
+);
 
 const mapDispatchToProps = dispatch => ({
-  removeItem: item => dispatch(removeItem(item))
-})
+  removeItem: item => dispatch(removeItem(item)),
+  setCurrentItem: item => dispatch(setCurrentItem(item))
+});
 
 export default connect(null, mapDispatchToProps)(CartItem);
