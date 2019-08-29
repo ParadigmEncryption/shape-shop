@@ -1,16 +1,16 @@
 .cart-item {
   display: flex;
-  flex-direction: column;
+
 
   .thumbnail {
     align-self: center;
-    width: 75%;
+    width: 5em;
     cursor: pointer;
   }
 
   .cart-item-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 1em;
 
     .name {
@@ -21,6 +21,10 @@
       cursor: pointer;
       line-height: 1.2em;
       padding-left: 1em;
+    }
+
+    .download-button {
+      width: 2em;
     }
   }
 }

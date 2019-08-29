@@ -22,28 +22,45 @@ $bg-color: #3e5875;
 //   }
 // }
 
-.cart-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  height: 70vmin;
-  width: 25vmin;
+.sidebar {
+  position: fixed;
+  display: grid;
+  grid-template-rows: 5em auto 5em;
+  // flex-direction: column;
+
+  height: 100%;
+  width: 25%;
   border: 1px solid $shape-color;
   background-color: $bg-color;
-  top: 12vmin;
-  right: 5vmin;
+  top: 0;
+  right: 0;
   z-index: 10;
+
+  .options {
+    width: 100%;
+    border-bottom: 1px solid $shape-color;
+  }
 
   .cart-items {
     display: flex;
+    // justify-content: flex-start;
     flex-direction: column;
-    height: 100%;
+
+    // flex-flow: wrap-reverse;
     overflow-y: scroll;
+
     padding: 1em;
 
     .empty-message {
       font-size: 1em;
       margin: 10vmin auto;
     }
+  }
+
+  button {
+    border-top: 1px solid $shape-color;
+    line-height: 4em;
+    font-size: 1.2em;
+    margin-top: auto; // always on bottom
   }
 }

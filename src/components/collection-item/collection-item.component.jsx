@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setCurrentItem } from '../../redux/item/item.actions';
+import { addItem } from '../../redux/cart/cart.actions';
 
 import SvgDisplay from '../svg-display/svg-display.component';
 
 import './collection-item.styles.scss';
 
 
-const CollectionItem = ({ item, setCurrentItem }) => {
+const CollectionItem = ({ item, setCurrentItem, addItem }) => {
   const { id, svg, name } = item;
 
   return (
@@ -24,15 +25,23 @@ const CollectionItem = ({ item, setCurrentItem }) => {
       </div>
 
       <div className='shape-footer'>
-        <span className='type'>{name}</span>
-        <span className='add-button'>&#10011;</span>
+        <span className='name'>
+          {name}
+        </span>
+        <button 
+          className='add-button'
+          onClick={() => addItem(item)}
+        >
+          &#10011;
+        </button>
       </div>
     </div>
   )
 };
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentItem: item => dispatch(setCurrentItem(item))
+  setCurrentItem: item => dispatch(setCurrentItem(item)),
+  addItem: item => dispatch(addItem(item))
 });
 
 export default connect(null, mapDispatchToProps)(CollectionItem);

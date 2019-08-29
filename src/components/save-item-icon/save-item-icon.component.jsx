@@ -12,22 +12,20 @@ import SvgDisplay from '../svg-display/svg-display.component';
 
 import './save-item-icon.styles.scss';
 
-const SaveItemIcon = ({ currentItem, cartItems, addItem }) => {
+const SaveItemIcon = ({ currentItem, cartItems, addItem }) => (
+  <div className='save-item'>
+    <div 
+      className='save-icon'
+      onClick={() => addItem(currentItem)}>
+      {
+        cartItems.find(cartItem => cartItem.name === currentItem.name) 
+        ? <SvgDisplay svg={svgIconPaths.saveIcon} />
+        : <SvgDisplay svg={svgIconPaths.addToCartIcon} />
+      }
+    </div>  
+  </div>
+);
 
-  return (
-    <div className='save-item'>
-      <div 
-        className='save-icon'
-        onClick={() => addItem(currentItem)}>
-        {
-          cartItems.find(cartItem => cartItem.name === currentItem.name) 
-          ? <SvgDisplay svg={svgIconPaths.saveIcon} />
-          : <SvgDisplay svg={svgIconPaths.addToCartIcon} />
-        }
-      </div>  
-    </div>
-  )
-};
 
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))

@@ -7,7 +7,6 @@ $shape-color: #cfcfcf;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-
     height: 8vmin;
 
     .item-name {
@@ -16,6 +15,10 @@ $shape-color: #cfcfcf;
       font-size: 5vmin;
       border: none;
       outline: none;
+    }
+
+    .save-button {
+      width: 7vmin;
     }
   }
   

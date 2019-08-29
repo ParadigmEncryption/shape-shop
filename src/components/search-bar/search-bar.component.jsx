@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { ReactComponent as SearchIcon } from '../../assets/svg-header/magnifying-glass.svg';
+import { svgIconPaths } from '../../utils/svg-icon-paths';
+
+import SvgDisplay from '../svg-display/svg-display.component';
 
 import { setSearchField, clearSearchField } from '../../redux/search/search.actions';
 
@@ -9,22 +11,26 @@ import './search-bar.styles.scss';
 
 const SearchBar = ({ placeholder, onSearchChange, clearSearchField, searchField }) => (
   <div className='search-bar-container'>
-    <input 
-      type='text'
-      className='search-bar'
-      autoFocus
-      value={searchField}
-      placeholder={placeholder}
-      onChange={ event => onSearchChange(event) } />
-    <span 
-      className={searchField ? 'clear-button' : 'clear-button hidden' }
-      onClick={() => clearSearchField()}
-    >
-      &#10006;
-    </span>
-    <button type='submit'> {/* onClick = focus on search-bar */}
-      <SearchIcon className='search-icon' />
-    </button>
+    <div className='text-bar'>
+      <input 
+        type='text'
+        className='search-bar'
+        autoFocus
+        value={searchField}
+        placeholder={placeholder}
+        onChange={ event => onSearchChange(event) } />
+      <span 
+        className={searchField ? 'clear-button' : 'clear-button hidden' }
+        onClick={() => clearSearchField()}
+      >
+        &#10006;
+      </span>
+    </div>
+    <div className='search-icon'>
+      <SvgDisplay svg={svgIconPaths.searchIcon} />
+    </div>
+      
+ 
   </div>
 );
 

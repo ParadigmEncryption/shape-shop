@@ -3,10 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
-import { svgIconPaths } from '../../utils/svg-icon-paths';
-
-import SvgDisplay from '../svg-display/svg-display.component';
 import SaveItemIcon from '../save-item-icon/save-item-icon.component';
+import DownloadItemIcon from '../download-item-icon/download-item-icon.component';
 
 import { setItemName, clearCurrentItem } from '../../redux/item/item.actions';
 import { selectItemName } from '../../redux/item/item.selectors';
@@ -23,7 +21,7 @@ const ItemPreviewFooter = ({ itemName, onNameChange, history, clearCurrentItem }
             maxLength='20'
             onChange={event => onNameChange(event)}
           />
-      <div className='save-icon' 
+      <div className='save-button' 
         onClick={() => {
           history.goBack();
           clearCurrentItem();
@@ -33,7 +31,7 @@ const ItemPreviewFooter = ({ itemName, onNameChange, history, clearCurrentItem }
     </div>
     <div className='footer-bottom'>
       <div className='download-icon'>
-        <SvgDisplay svg={svgIconPaths.downloadIcon} />
+        <DownloadItemIcon />
       </div> 
     </div>  
   </div>

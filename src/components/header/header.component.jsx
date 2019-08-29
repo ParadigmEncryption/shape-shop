@@ -5,7 +5,6 @@ import { createStructuredSelector } from 'reselect';
 
 import { ReactComponent as Logo } from '../../assets/svg-header/logo.svg';
 
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.component';
 import SearchBar from '../search-bar/search-bar.component';
 
@@ -19,15 +18,8 @@ const Header = ({ hidden }) => (
       <Logo className='logo' />
     </Link>
     <div className='options-container'>
-        <SearchBar placeholder='Search Shapes' />
-      <div className='sign-in'>
-        SIGN IN
-      </div>
-      <div className='option'>
-        <CartIcon />
-      </div>
+        <SearchBar placeholder='Search SVG' />
     </div>
-    {hidden ? null : <CartDropdown />}
   </div>
 );
 

@@ -6,13 +6,17 @@ $font-type: 'Quicksand', sans-serif;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 0 1vmin;
+  margin: 0 1em;
   width: 100%;
 
+  .text-bar {
+    border: 1px solid $shape-color;
+    background-color: $bg-color;
+  }
 
   input, button {
     font-family: $font-type;
-    background-color: transparent;
+    background-color: $bg-color;
     color: $shape-color;
     padding: 0;
     margin: 0;
@@ -22,13 +26,14 @@ $font-type: 'Quicksand', sans-serif;
 
   .search-bar {
     width: 80%;
-    font-size: 3vmin;
-    padding-left: 1vmin;
+    font-size: 1.4em;
+    padding-left: 1em;
+    
   }
 
   .clear-button {
-    margin-right: 2vmin;
-      font-size: 3vmin;
+    margin-right: 1em;
+      font-size: 1.4em;
     cursor: pointer;
   
     &.hidden {
@@ -37,7 +42,7 @@ $font-type: 'Quicksand', sans-serif;
   }
 
   .search-icon {
-    width: 4vmin;
+    width: 2em;
     cursor: pointer;
     fill: $shape-color;
   }

@@ -6,8 +6,7 @@ $bg-color: #3e5875;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6vmin;
-  margin-left: 1vmin;
+  width: 2.5em;
   cursor: pointer;
 
   .shopping-icon {
@@ -17,7 +16,7 @@ $bg-color: #3e5875;
 
   .item-count {
     position: absolute;
-    font-size: 4vmin;
+    font-size: 2em;
     font-weight: bold;
     color: $bg-color;
   }

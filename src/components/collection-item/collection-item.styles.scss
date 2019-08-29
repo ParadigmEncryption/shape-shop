@@ -35,14 +35,22 @@ $shape-color: #cfcfcf;
     width: 100%;
     display: flex;
     flex-direction: space-between;
-    padding: 0 .2em;
+    font-size: 16px;
 
-      .type {
-        width: 85%;
+      .name {
+        width: 80%;
+        font-size: 1em;
       }
 
       .add-button {
-        width: 15%;
+        width: 20%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        color: $shape-color;
+        font-size: 1.4em;
+        line-height: 0;
         cursor: pointer;
     }
   }

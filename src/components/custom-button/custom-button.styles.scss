@@ -2,10 +2,7 @@ $shape-color: #cfcfcf;
 $bg-color: #3e5875;
 
 .custom-button {
-  min-width: 6vmin;
   width: auto;
-  line-height: 12vmin;
-  font-size: 2.5vmin;
   background-color: $bg-color;
   color: $shape-color;
   text-transform: uppercase;
@@ -15,7 +12,6 @@ $bg-color: #3e5875;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  margin-top: auto; // always on bottom
 
   &:hover {
     background-color: $shape-color;
