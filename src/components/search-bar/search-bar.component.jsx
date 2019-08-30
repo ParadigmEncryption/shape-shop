@@ -15,7 +15,6 @@ const SearchBar = ({ placeholder, onSearchChange, clearSearchField, searchField 
       <input 
         type='text'
         className='search-bar'
-        autoFocus
         value={searchField}
         placeholder={placeholder}
         onChange={ event => onSearchChange(event) } />

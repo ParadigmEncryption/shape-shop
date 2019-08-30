@@ -27,9 +27,11 @@ const CartDropdown = ({ cartItems }) => (
         <span className='empty-message'>Your cart is empty</span>
       )}
     </div>
-    <CustomButton>
-      Download All
-    </CustomButton>
+    <div className='download-all-button'>
+      <CustomButton>
+        Download All
+      </CustomButton>
+    </div>
   </div>
 );
 

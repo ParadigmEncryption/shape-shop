@@ -57,10 +57,19 @@ $bg-color: #3e5875;
     }
   }
 
-  button {
+  .download-all-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    font-size: 24px;
     border-top: 1px solid $shape-color;
-    line-height: 4em;
-    font-size: 1.2em;
-    margin-top: auto; // always on bottom
+    height: 80px;
   }
+  // button {
+  //   border-top: 1px solid $shape-color;
+  //   line-height: 4em;
+  //   font-size: 1.2em;
+  //   margin-top: auto; // always on bottom
+  // }
 }
